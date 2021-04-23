@@ -40,7 +40,7 @@ p.saludo {
 }
 
 h2.saludo {
-    background: linear-gradient(to right bottom, var(--cream), var(--apple));
+    background: linear-gradient(to right bottom, var(--pistachio), var(--maize-crayola));
     font-size: 10rem;
     color: transparent;
     text-align: left;
@@ -55,9 +55,10 @@ h2.saludo {
     text-align: center;
 }
 
-.flecha{
+.flecha {
     color: white;
 }
+
 
 /* ==========================================================================
     resumen
@@ -68,7 +69,7 @@ h2.saludo {
     justify-content: space-between;
 }
 
-.contenido > * {
+.contenido>* {
     flex-basis: calc(50% - 1rem);
 }
 

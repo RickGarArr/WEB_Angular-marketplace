@@ -1,0 +1,11 @@
+.flex {
+    margin-top: 32px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+img {
+    border-radius: 5px;
+    box-shadow: 16pt -16pt 0px 10px var(--pistachio);
+    border-bottom: 2px solid var(--cadet-blue);
+}

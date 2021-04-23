@@ -1,21 +1,43 @@
 :root {
     --blue: #0275d8;
     --green: #22bb33;
-    --dark-green: #31462b;
-    --cream: #f2fc6d;
+    --red: #FF3333;
     --apple: #61c95e;
     --gray: #bebebe;
     --dark-gray: #9c9c9c;
     --light-gray: #e1e1e1;
-    --red: #FF3333;
+    /* ------------------------------------------------------------------------------------------ //  // */
+    --red-salsa: #f94144ff;
+    --orange-red: #f3722cff;
+    --yellow-orange-color-wheel: #f8961eff;
+    --mango-tango: #f9844aff;
+    --maize-crayola: #f9c74fff;
+    --pistachio: #90be6dff;
+    --zomp: #43aa8bff;
+    --cadet-blue: #4d908eff;
+    --queen-blue: #577590ff; /* color princial */
+    --cg-blue: #277da1ff;
+    --cg-blue-clear: rgb(235, 248, 253);
+    /* ------------------------------------------------------------------------------------------ //  // */
+    --key-lime: #d9ed92ff;
+    --yellow-green-crayola: #b5e48cff;
+    --granny-smith-apple: #99d98cff;
+    --ocean-green: #76c893ff;
+    --keppel: #52b69aff;
+    --viridian-green: #34a0a4ff;
+    --blue-munsell: #168aadff;
+    --celadon-blue: #1a759fff;
+    --lapis-lazuli: #1e6091ff;
+    --yale-blue: #184e77ff;
 }
 
 html {
-    line-height: 1;
+    line-height: 1.5;
     font-size: 75%;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
+    height: 100%;
 }
 
 *,
@@ -27,6 +49,7 @@ html {
 body {
     font-size: 1.4rem;
     background-color: rgb(240, 240, 240);
+    height: 100%;
 }
 
 h1,
@@ -48,9 +71,15 @@ h1 {
 }
 
 h2 {
+    background: #ccc;
+    background: linear-gradient(135deg, var(--celadon-blue), var(--zomp));
     font-size: 3.8rem;
     text-align: center;
     text-transform: uppercase;
+    /* color: transparent; */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 a {
@@ -68,6 +97,15 @@ input {
     border-radius: 5px;
 }
 
+i:focus {
+    outline: none;
+}
+
+a:focus {
+    outline: none;
+    color: var(--maize-crayola)!important;
+}
+
 input:focus {
     outline: none;
     box-shadow: 0 0 2px 2px var(--apple);
@@ -75,6 +113,10 @@ input:focus {
 
 textarea {
     resize: none;
+}
+
+textarea:focus {
+    outline: none;
 }
 
 input::-webkit-outer-spin-button,
@@ -634,7 +676,7 @@ input[type=number] {
 .sp-btn::before {
     content: '';
     position: absolute;
-    background-color: var(--apple);
+    background-color: var(--queen-blue);
     left: 0;
     right: 0;
     top: 0;
@@ -645,7 +687,7 @@ input[type=number] {
 .sp-btn::after {
     content: '';
     position: absolute;
-    background-color: var(--green);
+    background-color: var(--cadet-blue);
     top: 0;
     left: 0;
     width: 0%;
@@ -658,8 +700,12 @@ input[type=number] {
     width: 100%;
 }
 
+.sp-btn:disabled {
+    color: var(--dark-gray);
+}
+
 .sp-btn:disabled::before {
-    background-color: var(--dark-gray);
+    background-color: var(--gray);
     border: none;
 }
 

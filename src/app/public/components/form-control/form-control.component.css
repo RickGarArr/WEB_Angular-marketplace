@@ -1,8 +1,66 @@
+.background-input {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    right: 0px;
+    bottom: 16px;
+    z-index: -1;
+}
+
+.background-input::after,
+.background-input::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    z-index: -1;
+}
+
+.background-input::after {
+    /* border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px; */
+    background: linear-gradient(to left, transparent, var(--light-gray));
+}
+
+.background-input::before {
+    /* border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px; */
+    background: linear-gradient(to right, transparent, var(--light-gray));
+}
+
+.background-input.focus::before,
+.background-input.focus::after {
+    animation: spread .3s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes spread {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+
+.background-input::before {
+    left: 50%;
+}
+
+.background-input::after {
+    right: 50%;
+}
+
+/* ------------------------------------------------------------------------------------------ //  // */ 
+
 .campo {
     position: relative;
 }
 
-span {
+span.border-bottom {
     position: absolute;
     bottom: 10px;
     left: 0;
@@ -11,11 +69,11 @@ span {
     background-color: var(--gray);
 }
 
-span.invalid {
+span.border-bottom.invalid {
     background-color: var(--red);
 }
 
-span.valid {
+span.border-bottom.valid {
     background-color: var(--green);
 }
 

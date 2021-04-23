@@ -1,0 +1,17 @@
+<div class="seccion fadeIn-left" id="contacto-app">
+    <div class="contenedor">
+        <h2>Contacto</h2>
+        <form id="contacto" [formGroup]="contactoForm">
+            <app-form-control [control]="contactoForm.get('nombre')" labelName="Nombre" inputType="text"
+                placeholder="Ingresa tu Nombre" inputId="contacto-name"></app-form-control>
+            <app-form-control [control]="contactoForm.get('email')" labelName="Email" inputType="email"
+                placeholder="Ingresa tu Correo Electronico" inputId="contacto-email"></app-form-control>
+            <fieldset>
+                <legend>Mensaje</legend>
+                <textarea name="mensaje" id="contacto-mensaje" rows="4" placeholder="Escribe un mensaje" formControlName="mensaje"></textarea>
+            </fieldset>
+
+            <button type="submit" class=" btn sp-btn w-100" [disabled]="contactoForm.invalid">Enviar</button>
+        </form>
+    </div>
+</div>

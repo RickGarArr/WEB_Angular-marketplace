@@ -13,6 +13,8 @@ export class FormControlComponent implements OnInit,AfterViewInit{
   @ViewChild('campo') campo: ElementRef;
   @ViewChild('span') span: ElementRef;
 
+  backgroundInput: HTMLElement;
+
   @Input() labelName: string = 'S/N';
   @Input() inputType: string = 'text';
   @Input() inputName: string = 'sin_name';
@@ -26,12 +28,15 @@ export class FormControlComponent implements OnInit,AfterViewInit{
   }
 
   ngAfterViewInit(): void {
-    (this.input.nativeElement as HTMLInputElement).addEventListener('focus', () => {
+    (this.input.nativeElement as HTMLInputElement).addEventListener('focus', (e) => {
       this.campo.nativeElement.classList.add('focus');
+      this.backgroundInput = (e.target as HTMLInputElement).parentElement.getElementsByClassName('background-input')[0] as HTMLElement;
+      this.backgroundInput.classList.add('focus');
     });
 
     (this.input.nativeElement as HTMLInputElement).addEventListener('blur', () => {
       this.campo.nativeElement.classList.remove('focus');
+      this.backgroundInput.classList.remove('focus');
       if (this.control.valid) {
         this.span.nativeElement.classList.add('valid');
         this.span.nativeElement.classList.remove('invalid');

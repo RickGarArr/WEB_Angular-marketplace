@@ -3,15 +3,15 @@
     top: 0;
     width: 100%;
     padding: 3.4rem 0;
+    background-color: var(--queen-blue);
+    animation: fadeIn .5s;
     transition: all .2s ease-in-out;
-    z-index: 2;
-    background-color: white;
-    box-shadow: 0 0 12px 1px #919191;
+    z-index: 77;
 }
 
 #navbar a {
     position: relative;
-    color: black;
+    color: white;
     margin-right: 16px;
     transition: all .2s ease-in-out;
 }
@@ -21,9 +21,8 @@
     content: '';
     position: absolute;
     top: -2px;
-    width: 0%;
+    width: 0px;
     height: 2px;
-    background-color: var(--green);
     transition: all .3s ease-in-out;
 }
 
@@ -32,6 +31,7 @@
 }
 
 #navbar a:hover::after {
+    background-color: var(--maize-crayola);
     width: 50%;
 }
 
@@ -40,6 +40,7 @@
 }
 
 #navbar a:hover::before {
+    background-color: var(--maize-crayola);
     width: 50%;
 }
 
@@ -47,22 +48,22 @@
 /* ------------------------------------------------------------------------------------------ // active // */
 
 #navbar a.active {
-    color: var(--blue);
+    color: var(--maize-crayola);
 }
 
 #navbar a.active::after,
 #navbar a.active::before {
     width: 50%;
-    background-color: var(--blue);
+    background-color: var(--maize-crayola);
 }
 
 #navbar a.active:hover::after,
 #navbar a.active:hover::before {
-    background-color: var(--green);
+    background-color: var(--maize-crayola);
 }
 
 #navbar a:hover {
-    color: var(--green) !important;
+    color: var(--maize-crayola) !important;
 }
 
 

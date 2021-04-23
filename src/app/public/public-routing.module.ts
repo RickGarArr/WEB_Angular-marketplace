@@ -15,6 +15,12 @@ const routes: Routes = [
             },
             {
                 path: 'login', loadChildren: () => import('./pages/login/login.module').then( m => m.LoginModule)
+            },
+            {
+                path: 'acerca', loadChildren: () => import('./pages/acerca/acerca.module').then( m => m.AcercaModule)
+            },
+            {
+                path: 'contacto', loadChildren: () => import('./pages/contacto/contacto.module').then(m => m.ContactoModule)
             }
         ]
     }

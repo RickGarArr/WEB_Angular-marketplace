@@ -1,7 +1,7 @@
 <div class="seccion fadeIn-left" id="signup-app">
     <div class="contenedor">
         <h2>Registrar</h2>
-        <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <form [formGroup]="registerForm" (ngSubmit)="register()" id="signup">
             <app-form-control inputType="text" placeholder="Nombre" labelName="Nombre de la cadena Comercial" inputId="reg-nombre" [control]="registerForm.get('nombre')"></app-form-control>
             <app-form-control inputType="text" placeholder="Correo Electronico" labelName="Email" inputId="reg-email" [control]="registerForm.get('email')"></app-form-control>
             <app-form-control inputType="text" placeholder="Telefono" labelName="Telefono" inputId="reg-telefono" [control]="registerForm.get('telefono')"></app-form-control>

@@ -1,5 +1,6 @@
 <div class="campo" #campo>
     <label [for]="inputId" class="label">{{ labelName }}</label>
+    <span class="background-input"></span>
     <input [type]="inputType" [name]="inputName" [id]="inputId" class="input" [placeholder]="placeholder" #input [formControl]="control">
-    <span #span></span>
+    <span #span class="border-bottom"></span>
 </div>

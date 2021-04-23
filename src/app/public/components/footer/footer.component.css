@@ -1,22 +1,42 @@
+#app-footer {
+    animation: fadeIn .3s;
+}
+
+/* ==========================================================================
+    Header Footer
+========================================================================== */
+
 #footer-header {
-    background-color: #e1e1e1;
+    background-color: var(--queen-blue);
     padding: 1rem 0;
     position: relative;
     bottom: 0;
 }
 
-#footer-header p {
-    font-size: 1.2rem !important;
+/* ==========================================================================
+    contenido
+========================================================================== */
+
+.body {
+    background-color: var(--cg-blue-clear);
+    padding-top: .8rem;
+    padding-bottom: .8rem;
 }
-.contenedor {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+
+.contenido-body {
+    width: 320px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#sociales-nav {
+    margin: 1rem auto;
 }
 
 #sociales-nav a {
     margin-right: 2rem;
     color: var(--dark-green);
+    font-size: 2.4rem;
 }
 
 #sociales-nav a i {
@@ -24,7 +44,7 @@
 }
 
 #sociales-nav a:hover i {
-    color: var(--green);
+    color: var(--maize-crayola);
     transform: scale(1.2);
 }
 
@@ -35,11 +55,6 @@
 /* ==========================================================================
     contenido
 ========================================================================== */
-
-.contenido {
-    margin-top: 16px;
-    margin-bottom: 16px;
-}
 
 .columna {
     flex: 0 0 calc(50% - 1rem);
@@ -69,13 +84,13 @@
 
 .copy-right p {
     padding: 8px;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 1rem;
-    background-color: #e1e1e1;
+    background-color: var(--yale-blue);
     text-align: center;
+    color: white;
 }
 
 .copy-right p span {
-    color: var(--dark-green);
-    font-weight: bolder;
+    font-weight: 700;
 }
