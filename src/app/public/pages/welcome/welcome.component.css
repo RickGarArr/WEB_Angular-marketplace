@@ -1,0 +1,79 @@
+/* ==========================================================================
+    hero
+========================================================================== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    min-height: 640px;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background-image: url('/assets/img/hero.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: brightness(0.3);
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 80%;
+    margin: auto;
+    color: wheat;
+}
+
+p.saludo {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+}
+
+h2.saludo {
+    background: linear-gradient(to right bottom, var(--cream), var(--apple));
+    font-size: 10rem;
+    color: transparent;
+    text-align: left;
+    background-clip: text;
+}
+
+.flecha-wrap {
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.flecha{
+    color: white;
+}
+
+/* ==========================================================================
+    resumen
+========================================================================== */
+
+.contenido {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenido > * {
+    flex-basis: calc(50% - 1rem);
+}
+
+.texto {
+    background-color: var(--dark-green);
+    color: white;
+    padding: 2rem;
+}

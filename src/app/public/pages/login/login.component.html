@@ -1,0 +1,12 @@
+<div class="seccion fadeIn-right" id="login-app">
+    <div class="contenedor">
+        <form id="login" [formGroup]="loginForm" (ngSubmit)="login()">
+            <h2>Login</h2>
+            <app-form-control labelName="correo electronico" inputType="text" inputName="email" inputId="login-email" placeholder="Introduce tu Email" [control]="loginForm.get('email')">
+            </app-form-control>
+            <app-form-control labelName="password" inputType="password" inputName="password" inputId="login-password" placeholder="Introduce tu Password" [control]="loginForm.get('password')">
+            </app-form-control>
+            <button type="submit" class="btn sp-btn w-100" [disabled]="loginForm.invalid">login</button>
+        </form>
+    </div>
+</div>

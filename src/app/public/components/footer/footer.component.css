@@ -1,0 +1,81 @@
+#footer-header {
+    background-color: #e1e1e1;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+}
+
+#footer-header p {
+    font-size: 1.2rem !important;
+}
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#sociales-nav a {
+    margin-right: 2rem;
+    color: var(--dark-green);
+}
+
+#sociales-nav a i {
+    transition: all .1s ease-in-out;
+}
+
+#sociales-nav a:hover i {
+    color: var(--green);
+    transform: scale(1.2);
+}
+
+#sociales-nav a:last-of-type {
+    margin-right: 0;
+}
+
+/* ==========================================================================
+    contenido
+========================================================================== */
+
+.contenido {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.columna {
+    flex: 0 0 calc(50% - 1rem);
+}
+
+.columna h4 {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+}
+
+.columna p {
+    font-size: 1.2rem;
+}
+
+.row h5 {
+    margin-left: 16px;
+    padding: 8px;
+}
+
+.row span {
+    color: var(--dark-green);
+}
+/* ==========================================================================
+    copy
+========================================================================== */
+
+.copy-right p {
+    padding: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #e1e1e1;
+    text-align: center;
+}
+
+.copy-right p span {
+    color: var(--dark-green);
+    font-weight: bolder;
+}

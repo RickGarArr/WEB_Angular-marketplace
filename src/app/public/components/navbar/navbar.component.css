@@ -1,0 +1,86 @@
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 3.4rem 0;
+    transition: all .2s ease-in-out;
+    z-index: 2;
+    background-color: white;
+    box-shadow: 0 0 12px 1px #919191;
+}
+
+#navbar a {
+    position: relative;
+    color: black;
+    margin-right: 16px;
+    transition: all .2s ease-in-out;
+}
+
+#navbar a::after,
+#navbar a::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--green);
+    transition: all .3s ease-in-out;
+}
+
+#navbar a::after {
+    right: 50%;
+}
+
+#navbar a:hover::after {
+    width: 50%;
+}
+
+#navbar a::before {
+    left: 50%;
+}
+
+#navbar a:hover::before {
+    width: 50%;
+}
+
+
+/* ------------------------------------------------------------------------------------------ // active // */
+
+#navbar a.active {
+    color: var(--blue);
+}
+
+#navbar a.active::after,
+#navbar a.active::before {
+    width: 50%;
+    background-color: var(--blue);
+}
+
+#navbar a.active:hover::after,
+#navbar a.active:hover::before {
+    background-color: var(--green);
+}
+
+#navbar a:hover {
+    color: var(--green) !important;
+}
+
+
+/* ==========================================================================
+    pagina welcome
+========================================================================== */
+
+#navbar.welcome {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#navbar.welcome a {
+    color: white;
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
