@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ComercioRoutingModule } from './comercio/comercio-routing.module';
 import { PublicRoutingModule } from './public/public-routing.module';
 
 const routes: Routes = [
@@ -11,7 +12,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
+  imports: [ RouterModule.forRoot(routes), ComercioRoutingModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

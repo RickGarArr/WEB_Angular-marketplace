@@ -1,0 +1,92 @@
+#slide-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: white;
+    transition: all .3s ease;
+    box-shadow: 1px 0 8px 1px #ccc;
+    display: block;
+    padding-top: 80px;
+}
+
+#slide-menu.active {
+    width: 250px;
+    transform: translateX(0);
+}
+
+#slide-menu.inactive {
+    transform: translateX(-250px);
+    width: 0;
+}
+
+.slide-menu-items {
+    padding-top: 1.6rem;
+}
+
+.link {
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding: .6rem 1.6rem;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    transition: all .2s ease;
+}
+
+.link.active {
+    background-color: var(--celadon-blue);
+    color: var(--maize-crayola);
+}
+
+.link.active::after {
+    content: '>';
+    position: absolute;
+    right: 2.6rem;
+}
+
+.link:hover {
+    background-color: var(--celadon-blue);
+    color: white;
+}
+
+.link i {
+    margin-right: 1rem;
+}
+
+.link:hover::after {
+    content: '>';
+    position: absolute;
+    right: 2.6rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {transform: translateX(0);} 
+    20%, 70% { transform: translateX(-5px);}
+    30% { transform: translateX(18px);}
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translatex(-30vw);
+        width: 0%;
+    }
+    to {
+        transform: translatex(0);
+        width: 25vw;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        transform: translatex(0);
+        width: 25vw;
+    }
+    to {
+        transform: translatex(-30vw);
+        width: 0;
+    }
+}

@@ -1,0 +1,74 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 5px;
+    padding: 2rem;
+    z-index: 1;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    width: 100%;
+}
+
+.card-info {
+    flex-basis: 69%;
+    text-align: center;
+}
+
+.number {
+    font-size: 3.2rem;
+}
+
+.card-icon {
+    flex-basis: 29%;
+    font-size: 4rem;
+}
+
+.button {
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    padding: 4px 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card::after,
+.card::before {
+    content: '';
+    filter: brightness(0.8);
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--zomp);
+    z-index: -2;
+}
+
+.card::before {
+    clip-path: polygon(0 0, 60% 0, 80% 100%, 0% 100%);
+    /* background-color: var(--celadon-blue); */
+    background-image: linear-gradient(to right, var(--celadon-blue), var(--zomp));
+    z-index: -1;
+    transition: all .3s ease;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 8px 1px gray;
+}
+
+.card:hover::after,
+.card:hover::before {
+    filter: brightness(1);
+}
+.card:hover::before {
+    clip-path: polygon(0 0, 70% 0, 20% 100%, 0% 100%);   
+}
+
+a.button {
+    flex-basis: 100%;
+}

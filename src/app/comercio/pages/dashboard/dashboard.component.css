@@ -1,0 +1,14 @@
+#dashboard {
+    /* transition: all .3s; */
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cards > * {
+    flex-basis: calc(33% - 1rem);
+    margin-bottom: 1.6rem;
+}

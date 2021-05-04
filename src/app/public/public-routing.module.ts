@@ -7,7 +7,7 @@ const routes: Routes = [
         path: 'public',
         component: PublicComponent,
         children: [
-            { 
+            {
                 path: '', loadChildren: () => import('./pages/welcome/welcome.module').then( m => m.WelcomeModule) 
             },
             {
