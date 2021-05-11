@@ -1,0 +1,55 @@
+#admin-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media only screen and (min-width:641px) {
+    #admin-navbar {
+        position: relative;
+        height: 100vh;
+        width: 250px;
+        padding-top: 2rem;
+    }
+}
+
+#admin-navbar a {
+    display: block;
+    width: 100%;
+    padding: .4rem 1.6rem;
+    transition: all .2s ease;
+    color: var(--dark-gray);
+}
+
+#admin-navbar a:hover {
+    background-color: var(--lapis-lazuli);
+    color: white;
+}
+
+#admin-navbar a:hover i {
+    color: white;
+}
+
+#admin-navbar a i {
+    color: var(--dark-gray);
+    margin-right: 1rem;
+}
+
+/* ------------------------------------------------------------------------------------------ // active // */ 
+#admin-navbar a.admin-active {
+    color: var(--lapis-lazuli);
+    font-weight: 700;
+}
+
+#admin-navbar a.admin-active:hover {
+    color: white;
+}
+
+#admin-navbar a.admin-active i {
+    color: var(--lapis-lazuli);
+}
+
+#admin-navbar a.admin-active:hover i {
+    color: white;
+}
+ 

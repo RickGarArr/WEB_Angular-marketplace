@@ -1,0 +1,77 @@
+.general-card {
+    background-color: white;
+    padding: 1.6rem;
+    border-radius: 5px;
+    border: 1px solid var(--dark-gray);
+    box-shadow: 0 0 0 0 var(--dark-gray);
+    transition: box-shadow 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.general-card .general-card-title {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.general-card .contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.numero {
+    flex: 40%;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.informacion {
+    flex: calc(60% - 1.6rem);
+}
+
+.informacion .icono {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.ver-mas-button {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    width: 100%;
+    background-color: transparent; /*var(--yale-blue);*/
+    padding: .4rem 1.6rem;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.ver-mas-button::after, .ver-mas-button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: var(--lapis-lazuli);
+    width: 0;
+    z-index: -1;
+    transition: width .2s ease;
+}
+
+.ver-mas-button::before {
+    right: 0;
+    width: 100%;
+    background-color: var(--blue-munsell);
+}
+
+.ver-mas-button:hover::after {
+    width: 100%;
+}
+
+/* ------------------------------------------------------------------------------------------ // hover // */ 
+ 
+.general-card:hover {
+    box-shadow: 0 8px 8px -6px var(--dark-gray);
+    transform: scale(1.03);
+}

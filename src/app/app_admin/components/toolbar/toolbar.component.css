@@ -1,0 +1,14 @@
+#admin-toolbar {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--lapis-lazuli);
+    box-shadow: 0 0 8px 1px gray;
+}
+
+.contenido {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}

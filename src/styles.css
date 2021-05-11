@@ -106,7 +106,6 @@ i:focus {
 
 a:focus {
     outline: none;
-    color: var(--maize-crayola)!important;
 }
 
 input:focus {
@@ -154,14 +153,14 @@ button:focus {
 
 @media only screen and (min-width:768px) {
     .contenedor {
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
     }
 }
 
 @media only screen and (min-width:992px) {
     .contenedor {
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
     }
 }
